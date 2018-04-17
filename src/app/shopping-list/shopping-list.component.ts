@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Ingredient } from '../shared/ingredient.model';
 
 @Component({
@@ -12,6 +13,11 @@ ingredients:Ingredient[] = [new Ingredient('Apples',10),new Ingredient('Tomatoes
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onAddingIngredients(ingredient:Ingredient){
+    console.log(ingredient.amount+"::"+ingredient.name);
+    this.ingredients.push(ingredient);
   }
 
 }
